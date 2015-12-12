@@ -9,7 +9,7 @@ dat$Date <- as.Date(dat$Date, "%d/%m/%Y")
 ##Create new POSIXlt based dateTime column using Date and Time columns
 dat$DateTime <- strptime(paste(dat$Date,dat$Time), format = "%Y-%m-%d %H:%M:%S")
 
-##Sort order of columns, moving dateDate to position 1 and removing old Date/Time columns
+##Sort order of columns, moving dateTime to position 1 and removing old Date/Time columns
 dat <- dat[,c("DateTime","Global_active_power","Global_reactive_power","Voltage",
               "Global_intensity","Sub_metering_1","Sub_metering_2","Sub_metering_3")]
 
